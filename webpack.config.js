@@ -18,7 +18,7 @@ const plugins = [
   }),
   extractLess,
   new HtmlwebpackPlugin({
-    title: 'Responsive Nav',
+    title: 'Multi DatePicker',
     filename: 'index.html',
     template: 'docs/index.html',
     inject: true,

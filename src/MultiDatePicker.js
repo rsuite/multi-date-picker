@@ -5,9 +5,9 @@ import Tag from 'rsuite/lib/Tag';
 import Icon from 'rsuite/lib/Icon';
 import { format as dateFormat, isEqual } from 'date-fns';
 
-function getUnhandledProps(props) {
+function getUnhandledProps(props, Component) {
   const nextProps = {};
-  const keys = Object.keys(MultiDatePicker.propTypes);
+  const keys = Object.keys(Component.propTypes);
   Object.entries(props).forEach(([key, value]) => {
     if (keys.indexOf(key) === -1) {
       nextProps[key] = value;
@@ -19,10 +19,11 @@ function getUnhandledProps(props) {
 class MultiDatePicker extends React.Component {
   static propTypes = {
     value: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-    defalutValue: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    defaultValue: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     onChange: PropTypes.func,
     disabledDate: PropTypes.func,
-    format: PropTypes.string
+    format: PropTypes.string,
+    disabled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -32,7 +33,7 @@ class MultiDatePicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.defalutValue || []
+      value: props.defaultValue || []
     };
   }
 
@@ -43,10 +44,20 @@ class MultiDatePicker extends React.Component {
     }
     return value;
   }
+  setValue = value => {
+    const { onChange } = this.props;
+    if (typeof this.props.value === 'undefined') {
+      this.setState({
+        value
+      });
+    }
+    onChange && onChange(value);
+  };
+
   handleChange = date => {
     const value = [...this.state.value];
     value.push(date);
-    this.updateValue(value);
+    this.setValue(value);
   };
   handleDisabledDate = date => {
     const { disabledDate } = this.props;
@@ -64,38 +75,31 @@ class MultiDatePicker extends React.Component {
   handleRemove = date => {
     const value = [...this.getValue()];
     value.splice(value.indexOf(date), 1);
-
-    this.updateValue(value);
+    this.setValue(value);
   };
 
   handleClean = () => {
-    this.updateValue([]);
-  };
-
-  updateValue = value => {
-    const { onChange } = this.props;
-    if (typeof this.props.value === 'undefined') {
-      this.setState({
-        value
-      });
-    }
-    onChange && onChange(value);
+    this.setValue([]);
   };
 
   renderTags = () => {
     const { format } = this.props;
     const value = this.getValue();
-    return value.map((date, i) => (
-      <Tag
-        closable
-        key={i}
-        onClose={() => {
-          this.handleRemove(date);
-        }}
-      >
-        {dateFormat(date, format)}
-      </Tag>
-    ));
+
+    return value.map(date => {
+      const text = dateFormat(date, format);
+      return (
+        <Tag
+          closable
+          key={text}
+          onClose={() => {
+            this.handleRemove(date);
+          }}
+        >
+          {text}
+        </Tag>
+      );
+    });
   };
 
   renderCleanButton() {
@@ -115,15 +119,16 @@ class MultiDatePicker extends React.Component {
     );
   }
   render() {
-    const { format, ...props } = this.props;
-    const rest = getUnhandledProps(props);
+    const { format, disabled, ...props } = this.props;
+    const rest = getUnhandledProps(props, MultiDatePicker);
 
     return (
-      <div className="multi-date-picker">
+      <div className={`multi-date-picker ${disabled ? 'disabled' : ''}`}>
         {this.renderTags()}
         <DatePicker
           oneTap
           format={format}
+          disabled={disabled}
           appearance="subtle"
           onChange={this.handleChange}
           value={null}

@@ -1,31 +1,23 @@
-# Responsive Nav
+# Multi DatePicker
 
-A responsive navigation component based on rsuite navigation enhancements.
+A date picker that can select multiple dates
 
-## features
-
-- Support for removable tabs.
-- Support for automatic folding options when a row can not show all options.
 
 ## Installation
 
 ```
-npm install @rsuite/responsive-nav --save
+npm install @rsuite/multi-date-picker --save
 ```
 
 ## Usage
 
 ```js
-import Nav from "@rsuite/responsive-nav";
+import DatePicker from '@rsuite/multi-date-picker';
+import '@rsuite/multi-date-picker/lib/styles.less'
+
 const App = () => {
   return (
-    <Nav>
-      <Nav.Item eventKey="A">Item A</Nav.Item>
-      <Nav.Item eventKey="B">Item B</Nav.Item>
-      <Nav.Item eventKey="C">Item C</Nav.Item>
-      <Nav.Item eventKey="D">Item D</Nav.Item>
-      <Nav.Item eventKey="E">Item E</Nav.Item>
-    </Nav>
+    <DatePicker />
   );
 };
 
@@ -34,16 +26,14 @@ ReactDOM.render(<App />, mountNode);
 
 ## Props
 
-`ResponsiveNav` extends all the props of [`Nav`](https://rsuitejs.com/en/components/nav) and also supports:
+`MultiDatePicker` extends all the props of [`DatePicker`](https://rsuitejs.com/en/components/date-picker), with different support:
 
 
-
-| Property     | Type`(Default)`  | Description                                 |
-| ------------ | ---------------- | ------------------------------------------- |
-| moreProps    | object           | More drop-down menu props                   |
-| moreText     | React.Node       | More text displayed on the drop-down        |
-| onItemRemove | (eventKey)=>void | The callback function when removing options |
-| removable    | boolean          | Options can be removed                      |
+| Property     | Type`(Default)` | Description                       |
+| ------------ | --------------- | --------------------------------- |
+| value        | Date[]          | Value (Controlled)                |
+| defaultValue | Date[]          | Default value                     |
+| onChange     | (Date[])=>void  | Callback fired when value changed |
 
 
 ## License

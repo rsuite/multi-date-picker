@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="page">
-        <h1>MultiDatePicker</h1>
+        <h1>Multi DatePicker</h1>
         <p>A date picker that can select multiple dates</p>
         <p>
           <a href="https://github.com/rsuite/multi-date-picker">
