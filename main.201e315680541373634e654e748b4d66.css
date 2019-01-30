@@ -1,4 +1,4 @@
-/*! Last update: Wed Jan 30 2019 10:39:27 GMT+0800 (CST) */
+/*! Last update: Wed Jan 30 2019 12:30:10 GMT+0800 (CST) */
 /* stylelint-disable */
 /* stylelint-disable */
 body {
@@ -18889,7 +18889,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   margin-top: 5px;
 }
 .multi-date-picker .rs-picker-date {
-  vertical-align: initial;
+  vertical-align: top;
 }
 .multi-date-picker .rs-picker-toggle-clean {
   right: 36px;
@@ -18897,7 +18897,6 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 }
 .multi-date-picker .rs-picker-toggle-caret::before {
   content: '\F073' !important;
-  opacity: 0.5;
 }
 .multi-date-picker .rs-icon-plus {
   font-size: 12px;
@@ -18905,7 +18904,9 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 .multi-date-picker .rs-picker-date .rs-picker-toggle {
   border: none;
   background: #f7f7fa;
-  padding: 1px 7px;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 20px;
 }
 .multi-date-picker .rs-picker-date .rs-picker-toggle-caret {
   display: none;
