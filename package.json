@@ -1,6 +1,6 @@
 {
   "name": "@rsuite/multi-date-picker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A date picker that can select multiple dates",
   "main": "lib",
   "scripts": {
@@ -33,17 +33,19 @@
   },
   "homepage": "https://github.com/rsuite/multi-date-picker#readme",
   "peerDependencies": {
-    "rsuite": "^3.5.2"
+    "rsuite": "^3.5.2",
+    "react": "^16.7.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.7.6",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
+    "babel-plugin-date-fns": "^0.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-plugin-date-fns": "^0.2.1",
     "css-loader": "^2.1.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",

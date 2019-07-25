@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const { NODE_ENV } = process.env;
 
 const extractLess = new ExtractTextPlugin({
@@ -85,7 +86,7 @@ const common = {
   }
 };
 
-module.exports = (env = {}) => {
+module.exports = () => {
   if (NODE_ENV === 'development') {
     return Object.assign({}, common, {
       entry: [
