@@ -23,7 +23,8 @@ class MultiDatePicker extends React.Component {
     onChange: PropTypes.func,
     disabledDate: PropTypes.func,
     format: PropTypes.string,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    title: PropTypes.node
   };
 
   static defaultProps = {
@@ -118,12 +119,20 @@ class MultiDatePicker extends React.Component {
       </span>
     );
   }
+  renderLabel() {
+    const { title } = this.props;
+    if (title) {
+      return <div className="label-text">{title} </div>;
+    }
+    return null;
+  }
   render() {
     const { format, disabled, ...props } = this.props;
     const rest = getUnhandledProps(props, MultiDatePicker);
 
     return (
       <div className={`multi-date-picker ${disabled ? 'disabled' : ''}`}>
+        {this.renderLabel()}
         {this.renderTags()}
         <DatePicker
           oneTap

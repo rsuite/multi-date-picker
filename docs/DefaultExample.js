@@ -8,6 +8,9 @@ class DefaultExample extends React.Component {
         <h2>Default</h2>
         <MultiDatePicker />
         <hr />
+        <h2>Title</h2>
+        <MultiDatePicker title="日期: " />
+        <hr />
         <h2>Disabled</h2>
         <MultiDatePicker disabled />
         <hr />
