@@ -1,4 +1,4 @@
-/*! Last update: Wed Jan 30 2019 12:30:10 GMT+0800 (CST) */
+/*! Last update: Thu Jul 25 2019 13:02:02 GMT+0800 (GMT+08:00) */
 /* stylelint-disable */
 /* stylelint-disable */
 body {
@@ -3407,6 +3407,12 @@ hr {
 .rs-icon-rotate-270 {
   transform: rotate(270deg);
 }
+.rs-icon-flip-horizontal {
+  transform: scaleX(-1);
+}
+.rs-icon-flip-vertical {
+  transform: scaleY(-1);
+}
 .rs-icon-stack {
   display: inline-block;
   height: 2em;
@@ -3868,7 +3874,7 @@ hr {
   color: #575757;
   background: #f7f7fa;
 }
-.rs-btn-default.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #f2f2f5;
 }
 .rs-btn-default.rs-btn-loading:hover,
@@ -3887,14 +3893,14 @@ hr {
   color: #575757;
   background-color: #e5e5ea;
 }
-.rs-btn-default:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #d9d9d9;
 }
 .rs-btn-default:hover {
   color: #575757;
   background-color: #e5e5ea;
 }
-.rs-btn-default:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #d9d9d9;
 }
 .rs-btn-default:active,
@@ -3904,9 +3910,9 @@ hr {
   background-color: #d9d9d9;
   background-image: none;
 }
-.rs-btn-default:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #c5c6c7;
 }
 .rs-btn-default:active:hover,
@@ -3921,15 +3927,15 @@ hr {
   color: #575757;
   background-color: #d9d9d9;
 }
-.rs-btn-default:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #c5c6c7;
 }
 .rs-btn-default.rs-btn-disabled,
@@ -3950,7 +3956,7 @@ hr {
   color: #fff;
   background-color: #f44336;
 }
-.rs-btn-default.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #d63b2f;
 }
 .rs-btn-default.rs-btn-red.rs-btn-loading:hover,
@@ -3966,8 +3972,8 @@ hr {
   color: #fff;
   background-color: #d63b2f;
 }
-.rs-btn-default.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #b73229;
 }
 .rs-btn-default.rs-btn-red:hover {
@@ -3976,7 +3982,7 @@ hr {
 .rs-btn-default.rs-btn-red:not(.rs-btn-disabled):hover {
   background-color: #d63b2f;
 }
-.rs-btn-default.rs-btn-red:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-red:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #b73229;
 }
 .rs-btn-default.rs-btn-red:active,
@@ -3985,9 +3991,9 @@ hr {
   color: #fff;
   background-color: #b73229;
 }
-.rs-btn-default.rs-btn-red:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-red:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #992a22;
 }
 .rs-btn-default.rs-btn-red:active:hover,
@@ -4002,15 +4008,15 @@ hr {
   color: #fff;
   background-color: #b73229;
 }
-.rs-btn-default.rs-btn-red:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-red.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-red:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-red.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-red.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #992a22;
 }
 .rs-btn-default.rs-btn-red:active,
@@ -4031,7 +4037,7 @@ hr {
   color: #fff;
   background-color: #ff9800;
 }
-.rs-btn-default.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #df8500;
 }
 .rs-btn-default.rs-btn-orange.rs-btn-loading:hover,
@@ -4047,8 +4053,8 @@ hr {
   color: #fff;
   background-color: #df8500;
 }
-.rs-btn-default.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf7200;
 }
 .rs-btn-default.rs-btn-orange:hover {
@@ -4057,7 +4063,7 @@ hr {
 .rs-btn-default.rs-btn-orange:not(.rs-btn-disabled):hover {
   background-color: #df8500;
 }
-.rs-btn-default.rs-btn-orange:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-orange:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf7200;
 }
 .rs-btn-default.rs-btn-orange:active,
@@ -4066,9 +4072,9 @@ hr {
   color: #fff;
   background-color: #bf7200;
 }
-.rs-btn-default.rs-btn-orange:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-orange:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f5f00;
 }
 .rs-btn-default.rs-btn-orange:active:hover,
@@ -4083,15 +4089,15 @@ hr {
   color: #fff;
   background-color: #bf7200;
 }
-.rs-btn-default.rs-btn-orange:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-orange.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-orange:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-orange.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-orange.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f5f00;
 }
 .rs-btn-default.rs-btn-orange:active,
@@ -4112,7 +4118,7 @@ hr {
   color: #fff;
   background-color: #ffca28;
 }
-.rs-btn-default.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #dfb123;
 }
 .rs-btn-default.rs-btn-yellow.rs-btn-loading:hover,
@@ -4128,8 +4134,8 @@ hr {
   color: #fff;
   background-color: #dfb123;
 }
-.rs-btn-default.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf981e;
 }
 .rs-btn-default.rs-btn-yellow:hover {
@@ -4138,7 +4144,7 @@ hr {
 .rs-btn-default.rs-btn-yellow:not(.rs-btn-disabled):hover {
   background-color: #dfb123;
 }
-.rs-btn-default.rs-btn-yellow:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-yellow:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf981e;
 }
 .rs-btn-default.rs-btn-yellow:active,
@@ -4147,9 +4153,9 @@ hr {
   color: #fff;
   background-color: #bf981e;
 }
-.rs-btn-default.rs-btn-yellow:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-yellow:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f7e19;
 }
 .rs-btn-default.rs-btn-yellow:active:hover,
@@ -4164,15 +4170,15 @@ hr {
   color: #fff;
   background-color: #bf981e;
 }
-.rs-btn-default.rs-btn-yellow:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-yellow.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-yellow:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-yellow.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-yellow.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f7e19;
 }
 .rs-btn-default.rs-btn-yellow:active,
@@ -4193,7 +4199,7 @@ hr {
   color: #fff;
   background-color: #4caf50;
 }
-.rs-btn-default.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #439946;
 }
 .rs-btn-default.rs-btn-green.rs-btn-loading:hover,
@@ -4209,8 +4215,8 @@ hr {
   color: #fff;
   background-color: #439946;
 }
-.rs-btn-default.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #39833c;
 }
 .rs-btn-default.rs-btn-green:hover {
@@ -4219,7 +4225,7 @@ hr {
 .rs-btn-default.rs-btn-green:not(.rs-btn-disabled):hover {
   background-color: #439946;
 }
-.rs-btn-default.rs-btn-green:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-green:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #39833c;
 }
 .rs-btn-default.rs-btn-green:active,
@@ -4228,9 +4234,9 @@ hr {
   color: #fff;
   background-color: #39833c;
 }
-.rs-btn-default.rs-btn-green:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-green:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #306d32;
 }
 .rs-btn-default.rs-btn-green:active:hover,
@@ -4245,15 +4251,15 @@ hr {
   color: #fff;
   background-color: #39833c;
 }
-.rs-btn-default.rs-btn-green:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-green.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-green:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-green.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-green.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #306d32;
 }
 .rs-btn-default.rs-btn-green:active,
@@ -4274,7 +4280,7 @@ hr {
   color: #fff;
   background-color: #00bcd4;
 }
-.rs-btn-default.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #00a5ba;
 }
 .rs-btn-default.rs-btn-cyan.rs-btn-loading:hover,
@@ -4290,8 +4296,8 @@ hr {
   color: #fff;
   background-color: #00a5ba;
 }
-.rs-btn-default.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #008d9f;
 }
 .rs-btn-default.rs-btn-cyan:hover {
@@ -4300,7 +4306,7 @@ hr {
 .rs-btn-default.rs-btn-cyan:not(.rs-btn-disabled):hover {
   background-color: #00a5ba;
 }
-.rs-btn-default.rs-btn-cyan:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-cyan:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #008d9f;
 }
 .rs-btn-default.rs-btn-cyan:active,
@@ -4309,9 +4315,9 @@ hr {
   color: #fff;
   background-color: #008d9f;
 }
-.rs-btn-default.rs-btn-cyan:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-cyan:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #007685;
 }
 .rs-btn-default.rs-btn-cyan:active:hover,
@@ -4326,15 +4332,15 @@ hr {
   color: #fff;
   background-color: #008d9f;
 }
-.rs-btn-default.rs-btn-cyan:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-cyan.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-cyan:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-cyan.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-cyan.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #007685;
 }
 .rs-btn-default.rs-btn-cyan:active,
@@ -4355,7 +4361,7 @@ hr {
   color: #fff;
   background-color: #2196f3;
 }
-.rs-btn-default.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #1d83d5;
 }
 .rs-btn-default.rs-btn-blue.rs-btn-loading:hover,
@@ -4371,8 +4377,8 @@ hr {
   color: #fff;
   background-color: #1d83d5;
 }
-.rs-btn-default.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #1971b6;
 }
 .rs-btn-default.rs-btn-blue:hover {
@@ -4381,7 +4387,7 @@ hr {
 .rs-btn-default.rs-btn-blue:not(.rs-btn-disabled):hover {
   background-color: #1d83d5;
 }
-.rs-btn-default.rs-btn-blue:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-blue:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #1971b6;
 }
 .rs-btn-default.rs-btn-blue:active,
@@ -4390,9 +4396,9 @@ hr {
   color: #fff;
   background-color: #1971b6;
 }
-.rs-btn-default.rs-btn-blue:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-blue:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #155e98;
 }
 .rs-btn-default.rs-btn-blue:active:hover,
@@ -4407,15 +4413,15 @@ hr {
   color: #fff;
   background-color: #1971b6;
 }
-.rs-btn-default.rs-btn-blue:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-blue.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-blue:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-blue.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-blue.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #155e98;
 }
 .rs-btn-default.rs-btn-blue:active,
@@ -4436,7 +4442,7 @@ hr {
   color: #fff;
   background-color: #673ab7;
 }
-.rs-btn-default.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #5a33a0;
 }
 .rs-btn-default.rs-btn-violet.rs-btn-loading:hover,
@@ -4452,8 +4458,8 @@ hr {
   color: #fff;
   background-color: #5a33a0;
 }
-.rs-btn-default.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #4d2c89;
 }
 .rs-btn-default.rs-btn-violet:hover {
@@ -4462,7 +4468,7 @@ hr {
 .rs-btn-default.rs-btn-violet:not(.rs-btn-disabled):hover {
   background-color: #5a33a0;
 }
-.rs-btn-default.rs-btn-violet:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-violet:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #4d2c89;
 }
 .rs-btn-default.rs-btn-violet:active,
@@ -4471,9 +4477,9 @@ hr {
   color: #fff;
   background-color: #4d2c89;
 }
-.rs-btn-default.rs-btn-violet:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-violet:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #402472;
 }
 .rs-btn-default.rs-btn-violet:active:hover,
@@ -4488,15 +4494,15 @@ hr {
   color: #fff;
   background-color: #4d2c89;
 }
-.rs-btn-default.rs-btn-violet:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-default.rs-btn-violet.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-default.rs-btn-violet:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-default.rs-btn-violet.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-default.rs-btn-violet.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #402472;
 }
 .rs-btn-default.rs-btn-violet:active,
@@ -4517,7 +4523,7 @@ hr {
   color: #fff;
   background-color: #34c3ff;
 }
-.rs-btn-primary.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #2eabdf;
 }
 .rs-btn-primary.rs-btn-loading:hover,
@@ -4533,8 +4539,8 @@ hr {
   color: #fff;
   background-color: #2eabdf;
 }
-.rs-btn-primary:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #2792bf;
 }
 .rs-btn-primary:hover {
@@ -4543,7 +4549,7 @@ hr {
 .rs-btn-primary:not(.rs-btn-disabled):hover {
   background-color: #2eabdf;
 }
-.rs-btn-primary:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #2792bf;
 }
 .rs-btn-primary:active,
@@ -4552,9 +4558,9 @@ hr {
   color: #fff;
   background-color: #2792bf;
 }
-.rs-btn-primary:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #217a9f;
 }
 .rs-btn-primary:active:hover,
@@ -4569,15 +4575,15 @@ hr {
   color: #fff;
   background-color: #2792bf;
 }
-.rs-btn-primary:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #217a9f;
 }
 .rs-btn-primary:active,
@@ -4606,7 +4612,7 @@ hr {
   color: #fff;
   background-color: #f44336;
 }
-.rs-btn-primary.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #d63b2f;
 }
 .rs-btn-primary.rs-btn-red.rs-btn-loading:hover,
@@ -4622,8 +4628,8 @@ hr {
   color: #fff;
   background-color: #d63b2f;
 }
-.rs-btn-primary.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #b73229;
 }
 .rs-btn-primary.rs-btn-red:hover {
@@ -4632,7 +4638,7 @@ hr {
 .rs-btn-primary.rs-btn-red:not(.rs-btn-disabled):hover {
   background-color: #d63b2f;
 }
-.rs-btn-primary.rs-btn-red:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-red:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #b73229;
 }
 .rs-btn-primary.rs-btn-red:active,
@@ -4641,9 +4647,9 @@ hr {
   color: #fff;
   background-color: #b73229;
 }
-.rs-btn-primary.rs-btn-red:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-red:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #992a22;
 }
 .rs-btn-primary.rs-btn-red:active:hover,
@@ -4658,15 +4664,15 @@ hr {
   color: #fff;
   background-color: #b73229;
 }
-.rs-btn-primary.rs-btn-red:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-red.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-red:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-red.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-red.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #992a22;
 }
 .rs-btn-primary.rs-btn-red:active,
@@ -4687,7 +4693,7 @@ hr {
   color: #fff;
   background-color: #ff9800;
 }
-.rs-btn-primary.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #df8500;
 }
 .rs-btn-primary.rs-btn-orange.rs-btn-loading:hover,
@@ -4703,8 +4709,8 @@ hr {
   color: #fff;
   background-color: #df8500;
 }
-.rs-btn-primary.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf7200;
 }
 .rs-btn-primary.rs-btn-orange:hover {
@@ -4713,7 +4719,7 @@ hr {
 .rs-btn-primary.rs-btn-orange:not(.rs-btn-disabled):hover {
   background-color: #df8500;
 }
-.rs-btn-primary.rs-btn-orange:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-orange:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf7200;
 }
 .rs-btn-primary.rs-btn-orange:active,
@@ -4722,9 +4728,9 @@ hr {
   color: #fff;
   background-color: #bf7200;
 }
-.rs-btn-primary.rs-btn-orange:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-orange:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f5f00;
 }
 .rs-btn-primary.rs-btn-orange:active:hover,
@@ -4739,15 +4745,15 @@ hr {
   color: #fff;
   background-color: #bf7200;
 }
-.rs-btn-primary.rs-btn-orange:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-orange.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-orange:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-orange.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-orange.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f5f00;
 }
 .rs-btn-primary.rs-btn-orange:active,
@@ -4768,7 +4774,7 @@ hr {
   color: #fff;
   background-color: #ffca28;
 }
-.rs-btn-primary.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #dfb123;
 }
 .rs-btn-primary.rs-btn-yellow.rs-btn-loading:hover,
@@ -4784,8 +4790,8 @@ hr {
   color: #fff;
   background-color: #dfb123;
 }
-.rs-btn-primary.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf981e;
 }
 .rs-btn-primary.rs-btn-yellow:hover {
@@ -4794,7 +4800,7 @@ hr {
 .rs-btn-primary.rs-btn-yellow:not(.rs-btn-disabled):hover {
   background-color: #dfb123;
 }
-.rs-btn-primary.rs-btn-yellow:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-yellow:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #bf981e;
 }
 .rs-btn-primary.rs-btn-yellow:active,
@@ -4803,9 +4809,9 @@ hr {
   color: #fff;
   background-color: #bf981e;
 }
-.rs-btn-primary.rs-btn-yellow:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-yellow:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f7e19;
 }
 .rs-btn-primary.rs-btn-yellow:active:hover,
@@ -4820,15 +4826,15 @@ hr {
   color: #fff;
   background-color: #bf981e;
 }
-.rs-btn-primary.rs-btn-yellow:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-yellow.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-yellow:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-yellow.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-yellow.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #9f7e19;
 }
 .rs-btn-primary.rs-btn-yellow:active,
@@ -4849,7 +4855,7 @@ hr {
   color: #fff;
   background-color: #4caf50;
 }
-.rs-btn-primary.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #439946;
 }
 .rs-btn-primary.rs-btn-green.rs-btn-loading:hover,
@@ -4865,8 +4871,8 @@ hr {
   color: #fff;
   background-color: #439946;
 }
-.rs-btn-primary.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #39833c;
 }
 .rs-btn-primary.rs-btn-green:hover {
@@ -4875,7 +4881,7 @@ hr {
 .rs-btn-primary.rs-btn-green:not(.rs-btn-disabled):hover {
   background-color: #439946;
 }
-.rs-btn-primary.rs-btn-green:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-green:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #39833c;
 }
 .rs-btn-primary.rs-btn-green:active,
@@ -4884,9 +4890,9 @@ hr {
   color: #fff;
   background-color: #39833c;
 }
-.rs-btn-primary.rs-btn-green:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-green:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #306d32;
 }
 .rs-btn-primary.rs-btn-green:active:hover,
@@ -4901,15 +4907,15 @@ hr {
   color: #fff;
   background-color: #39833c;
 }
-.rs-btn-primary.rs-btn-green:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-green.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-green:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-green.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-green.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #306d32;
 }
 .rs-btn-primary.rs-btn-green:active,
@@ -4930,7 +4936,7 @@ hr {
   color: #fff;
   background-color: #00bcd4;
 }
-.rs-btn-primary.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #00a5ba;
 }
 .rs-btn-primary.rs-btn-cyan.rs-btn-loading:hover,
@@ -4946,8 +4952,8 @@ hr {
   color: #fff;
   background-color: #00a5ba;
 }
-.rs-btn-primary.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #008d9f;
 }
 .rs-btn-primary.rs-btn-cyan:hover {
@@ -4956,7 +4962,7 @@ hr {
 .rs-btn-primary.rs-btn-cyan:not(.rs-btn-disabled):hover {
   background-color: #00a5ba;
 }
-.rs-btn-primary.rs-btn-cyan:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-cyan:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #008d9f;
 }
 .rs-btn-primary.rs-btn-cyan:active,
@@ -4965,9 +4971,9 @@ hr {
   color: #fff;
   background-color: #008d9f;
 }
-.rs-btn-primary.rs-btn-cyan:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-cyan:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #007685;
 }
 .rs-btn-primary.rs-btn-cyan:active:hover,
@@ -4982,15 +4988,15 @@ hr {
   color: #fff;
   background-color: #008d9f;
 }
-.rs-btn-primary.rs-btn-cyan:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-cyan.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-cyan:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-cyan.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-cyan.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #007685;
 }
 .rs-btn-primary.rs-btn-cyan:active,
@@ -5011,7 +5017,7 @@ hr {
   color: #fff;
   background-color: #2196f3;
 }
-.rs-btn-primary.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #1d83d5;
 }
 .rs-btn-primary.rs-btn-blue.rs-btn-loading:hover,
@@ -5027,8 +5033,8 @@ hr {
   color: #fff;
   background-color: #1d83d5;
 }
-.rs-btn-primary.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #1971b6;
 }
 .rs-btn-primary.rs-btn-blue:hover {
@@ -5037,7 +5043,7 @@ hr {
 .rs-btn-primary.rs-btn-blue:not(.rs-btn-disabled):hover {
   background-color: #1d83d5;
 }
-.rs-btn-primary.rs-btn-blue:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-blue:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #1971b6;
 }
 .rs-btn-primary.rs-btn-blue:active,
@@ -5046,9 +5052,9 @@ hr {
   color: #fff;
   background-color: #1971b6;
 }
-.rs-btn-primary.rs-btn-blue:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-blue:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #155e98;
 }
 .rs-btn-primary.rs-btn-blue:active:hover,
@@ -5063,15 +5069,15 @@ hr {
   color: #fff;
   background-color: #1971b6;
 }
-.rs-btn-primary.rs-btn-blue:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-blue.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-blue:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-blue.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-blue.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #155e98;
 }
 .rs-btn-primary.rs-btn-blue:active,
@@ -5092,7 +5098,7 @@ hr {
   color: #fff;
   background-color: #673ab7;
 }
-.rs-btn-primary.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #5a33a0;
 }
 .rs-btn-primary.rs-btn-violet.rs-btn-loading:hover,
@@ -5108,8 +5114,8 @@ hr {
   color: #fff;
   background-color: #5a33a0;
 }
-.rs-btn-primary.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #4d2c89;
 }
 .rs-btn-primary.rs-btn-violet:hover {
@@ -5118,7 +5124,7 @@ hr {
 .rs-btn-primary.rs-btn-violet:not(.rs-btn-disabled):hover {
   background-color: #5a33a0;
 }
-.rs-btn-primary.rs-btn-violet:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-violet:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #4d2c89;
 }
 .rs-btn-primary.rs-btn-violet:active,
@@ -5127,9 +5133,9 @@ hr {
   color: #fff;
   background-color: #4d2c89;
 }
-.rs-btn-primary.rs-btn-violet:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-violet:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #402472;
 }
 .rs-btn-primary.rs-btn-violet:active:hover,
@@ -5144,15 +5150,15 @@ hr {
   color: #fff;
   background-color: #4d2c89;
 }
-.rs-btn-primary.rs-btn-violet:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-btn-primary.rs-btn-violet.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-btn-primary.rs-btn-violet:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-btn-primary.rs-btn-violet.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-btn-primary.rs-btn-violet.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #402472;
 }
 .rs-btn-primary.rs-btn-violet:active,
@@ -6983,6 +6989,42 @@ hr {
 }
 .rs-picker-cascader-menu-items > div::after {
   clear: both;
+}
+.rs-picker-cascader-search-panel {
+  max-height: 300px;
+  overflow: auto;
+}
+.rs-picker-cascader-row {
+  cursor: pointer;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.rs-picker-cascader-row:hover {
+  color: #575757;
+  background-color: #ebf9ff;
+}
+.rs-picker-cascader-row-disabled {
+  cursor: not-allowed;
+}
+.rs-picker-cascader-row-disabled,
+.rs-picker-cascader-row-disabled:hover {
+  color: #c5c6c7;
+}
+.rs-picker-cascader-row-disabled strong {
+  opacity: 0.7;
+}
+.rs-picker-cascader-col {
+  padding: 8px 0;
+  display: inline-block;
+}
+.rs-picker-cascader-col::after {
+  content: '\00a0/\00a0';
+}
+.rs-picker-cascader-col:last-child::after {
+  display: none;
+}
+.rs-picker-cascader-col:last-child strong {
+  color: #34c3ff;
 }
 .rs-picker-cascader-menu-column {
   float: left;
@@ -9200,7 +9242,7 @@ hr {
   outline: 0;
   background-image: none;
 }
-.rs-picker-toolbar-right-btn-ok.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-picker-toolbar-right-btn-ok.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #2eabdf;
 }
 .rs-picker-toolbar-right-btn-ok.rs-btn-loading:hover,
@@ -9216,8 +9258,8 @@ hr {
   color: #fff;
   background-color: #2eabdf;
 }
-.rs-picker-toolbar-right-btn-ok:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-picker-toolbar-right-btn-ok:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok.rs-btn-focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #2792bf;
 }
 .rs-picker-toolbar-right-btn-ok:hover {
@@ -9226,7 +9268,7 @@ hr {
 .rs-picker-toolbar-right-btn-ok:not(.rs-btn-disabled):hover {
   background-color: #2eabdf;
 }
-.rs-picker-toolbar-right-btn-ok:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-picker-toolbar-right-btn-ok:not(.rs-btn-disabled):hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #2792bf;
 }
 .rs-picker-toolbar-right-btn-ok:active,
@@ -9235,9 +9277,9 @@ hr {
   color: #fff;
   background-color: #2792bf;
 }
-.rs-picker-toolbar-right-btn-ok:active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-picker-toolbar-right-btn-ok:active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok.rs-btn-active.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #217a9f;
 }
 .rs-picker-toolbar-right-btn-ok:active:hover,
@@ -9252,15 +9294,15 @@ hr {
   color: #fff;
   background-color: #2792bf;
 }
-.rs-picker-toolbar-right-btn-ok:active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok:hover.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok:active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok:focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok:active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-picker-toolbar-right-btn-ok.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon,
-.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok.focus.rs-btn-icon.rs-btn-icon-with-text > .rs-icon {
+.rs-picker-toolbar-right-btn-ok:active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok.rs-btn-active:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok:hover.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok:active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok.rs-btn-active:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok:focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok:active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-picker-toolbar-right-btn-ok.rs-btn-active.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon,
+.rs-open > .rs-dropdown-toggle.rs-picker-toolbar-right-btn-ok.focus.rs-btn-icon.rs-btn-icon-with-text:not(.rs-btn-loading) > .rs-icon {
   background: #217a9f;
 }
 .rs-picker-toolbar-right-btn-ok:active,
@@ -9320,6 +9362,9 @@ hr {
 }
 .rs-picker-date-inline .rs-calendar {
   height: 286px;
+}
+.rs-picker-date-inline .rs-calendar-table-cell-content {
+  width: 100%;
 }
 .rs-calendar-show-month-dropdown .rs-calendar-header-month-toolbar {
   padding-left: 24px;
@@ -9625,6 +9670,8 @@ hr {
   clear: both;
 }
 .rs-drawer-header .rs-drawer-title {
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   color: #272c36;
   overflow: hidden;
@@ -9728,28 +9775,6 @@ hr {
 .rs-dropdown .rs-btn > .rs-dropdown-toggle-caret {
   margin-left: 4px;
 }
-.rs-dropdown.both-ends .rs-btn {
-  text-align: left;
-}
-.rs-dropdown.both-ends .rs-btn::before,
-.rs-dropdown.both-ends .rs-btn::after {
-  content: ' ';
-  display: table;
-}
-.rs-dropdown.both-ends .rs-btn::after {
-  clear: both;
-}
-.rs-dropdown.both-ends .rs-btn::before,
-.rs-dropdown.both-ends .rs-btn::after {
-  content: ' ';
-  display: table;
-}
-.rs-dropdown.both-ends .rs-btn::after {
-  clear: both;
-}
-.rs-dropdown.both-ends .rs-btn > .rs-dropdown-toggle-caret {
-  float: right;
-}
 .rs-dropdown .rs-dropdown-menu {
   position: absolute;
   z-index: 6;
@@ -9843,7 +9868,7 @@ hr {
 .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
   display: inline-block;
 }
-.rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-icon {
+.rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-dropdown-menu-toggle-icon {
   position: absolute;
   width: 5px;
   line-height: 1.42857143;
@@ -9856,19 +9881,19 @@ hr {
 .rs-dropdown-item-submenu.rs-dropdown-menu-pull-right > .rs-dropdown-item-content {
   padding-right: 27px;
 }
-.rs-dropdown-item-submenu.rs-dropdown-menu-pull-right > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-icon {
+.rs-dropdown-item-submenu.rs-dropdown-menu-pull-right > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-dropdown-menu-toggle-icon {
   right: 12px;
 }
-.rs-dropdown-item-submenu.rs-dropdown-menu-pull-right > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-icon::before {
+.rs-dropdown-item-submenu.rs-dropdown-menu-pull-right > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-dropdown-menu-toggle-icon::before {
   content: '\ea0c';
 }
 .rs-dropdown-item-submenu.rs-dropdown-menu-pull-left > .rs-dropdown-item-content {
   padding-left: 27px;
 }
-.rs-dropdown-item-submenu.rs-dropdown-menu-pull-left > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-icon {
+.rs-dropdown-item-submenu.rs-dropdown-menu-pull-left > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-dropdown-menu-toggle-icon {
   left: 12px;
 }
-.rs-dropdown-item-submenu.rs-dropdown-menu-pull-left > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-icon::before {
+.rs-dropdown-item-submenu.rs-dropdown-menu-pull-left > .rs-dropdown-item-content > .rs-dropdown-menu-toggle .rs-dropdown-menu-toggle-icon::before {
   content: '\ea0a';
 }
 .rs-dropdown-item-submenu.rs-dropdown-menu-pull-right > .rs-dropdown-item-content > .rs-dropdown-menu {
@@ -10223,7 +10248,6 @@ hr {
   border: 1px solid #e5e5ea;
   transition: border-color ease-in-out 0.3s;
   border-radius: 6px;
-  height: 36px;
   padding: 7px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -10255,16 +10279,14 @@ textarea.rs-input {
   max-height: 200px;
 }
 .rs-input-xs {
-  height: 24px;
   padding: 1px 11px;
   font-size: 12px;
-  line-height: 1.42857143;
+  line-height: 1.66666667;
 }
 textarea.rs-input-xs {
   height: auto;
 }
 .rs-input-lg {
-  height: 42px;
   padding: 9px 11px;
   font-size: 16px;
   line-height: 1.375;
@@ -10273,7 +10295,6 @@ textarea.rs-input-lg {
   height: auto;
 }
 .rs-input-sm {
-  height: 30px;
   padding: 4px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -12224,7 +12245,7 @@ textarea.rs-input-sm {
   width: 100%;
   border-radius: 0;
 }
-.rs-input-group.rs-input-group-inside input.rs-input {
+.rs-input-group.rs-input-group-inside .rs-input {
   display: block;
   width: 100%;
   padding-right: 36px;
@@ -12650,10 +12671,8 @@ textarea.rs-input-sm {
   background: none;
 }
 .rs-input-group.rs-input-group-inside .rs-input-group-btn > .rs-icon {
-  font-size: inherit;
-}
-.rs-input-group.rs-input-group-inside .rs-input-group-btn > .rs-icon::before {
-  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.42857143;
 }
 .rs-input-group.rs-input-group-inside .rs-input-group-btn:first-child {
   border-bottom-left-radius: 6px;
@@ -12688,13 +12707,15 @@ textarea.rs-input-sm {
   right: 1px;
 }
 .rs-input-group-lg > .rs-input {
-  height: 42px;
   padding: 9px 11px;
   font-size: 16px;
   line-height: 1.375;
 }
 textarea.rs-input-group-lg > .rs-input {
   height: auto;
+}
+.rs-input-group-lg.rs-input-group-inside > .rs-input {
+  padding-right: 46px;
 }
 .rs-input-group-lg.rs-input-group:not(.rs-input-group-inside) > .rs-input {
   height: 40px;
@@ -12710,13 +12731,15 @@ textarea.rs-input-group-lg > .rs-input {
   padding-bottom: 8px;
 }
 .rs-input-group-md > .rs-input {
-  height: 36px;
   padding: 7px 11px;
   font-size: 14px;
   line-height: 1.42857143;
 }
 textarea.rs-input-group-md > .rs-input {
   height: auto;
+}
+.rs-input-group-md.rs-input-group-inside > .rs-input {
+  padding-right: 36px;
 }
 .rs-input-group-md.rs-input-group:not(.rs-input-group-inside) > .rs-input {
   height: 34px;
@@ -12732,13 +12755,15 @@ textarea.rs-input-group-md > .rs-input {
   padding-bottom: 6px;
 }
 .rs-input-group-sm > .rs-input {
-  height: 30px;
   padding: 4px 11px;
   font-size: 14px;
   line-height: 1.42857143;
 }
 textarea.rs-input-group-sm > .rs-input {
   height: auto;
+}
+.rs-input-group-sm.rs-input-group-inside > .rs-input {
+  padding-right: 30px;
 }
 .rs-input-group-sm.rs-input-group:not(.rs-input-group-inside) > .rs-input {
   height: 28px;
@@ -12754,13 +12779,15 @@ textarea.rs-input-group-sm > .rs-input {
   padding-bottom: 3px;
 }
 .rs-input-group-xs > .rs-input {
-  height: 24px;
   padding: 1px 11px;
   font-size: 12px;
-  line-height: 1.42857143;
+  line-height: 1.66666667;
 }
 textarea.rs-input-group-xs > .rs-input {
   height: auto;
+}
+.rs-input-group-xs.rs-input-group-inside > .rs-input {
+  padding-right: 26px;
 }
 .rs-input-group-xs.rs-input-group:not(.rs-input-group-inside) > .rs-input {
   height: 22px;
@@ -12772,7 +12799,6 @@ textarea.rs-input-group-xs > .rs-input {
   font-size: inherit;
 }
 .rs-input-group.rs-input-group-lg > .rs-input-group-addon {
-  height: 42px;
   padding: 9px 11px;
   font-size: 16px;
   line-height: 1.375;
@@ -12784,7 +12810,6 @@ textarea.rs-input-group.rs-input-group-lg > .rs-input-group-addon {
   height: auto;
 }
 .rs-input-group.rs-input-group-md > .rs-input-group-addon {
-  height: 36px;
   padding: 7px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -12796,7 +12821,6 @@ textarea.rs-input-group.rs-input-group-md > .rs-input-group-addon {
   height: auto;
 }
 .rs-input-group.rs-input-group-sm > .rs-input-group-addon {
-  height: 30px;
   padding: 4px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -12808,10 +12832,9 @@ textarea.rs-input-group.rs-input-group-sm > .rs-input-group-addon {
   height: auto;
 }
 .rs-input-group.rs-input-group-xs > .rs-input-group-addon {
-  height: 24px;
   padding: 1px 11px;
   font-size: 12px;
-  line-height: 1.42857143;
+  line-height: 1.66666667;
   width: 28px;
   padding-left: 7px;
   padding-right: 7px;
@@ -12820,7 +12843,6 @@ textarea.rs-input-group.rs-input-group-xs > .rs-input-group-addon {
   height: auto;
 }
 .rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn {
-  height: 42px;
   padding: 9px 11px;
   font-size: 16px;
   line-height: 1.375;
@@ -12832,13 +12854,10 @@ textarea.rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn {
   height: auto;
 }
 .rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn > .rs-icon {
-  font-size: inherit;
-}
-.rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn > .rs-icon::before {
-  vertical-align: middle;
+  font-size: 16px;
+  line-height: 1.375;
 }
 .rs-input-group-inside.rs-input-group-md > .rs-input-group-btn {
-  height: 36px;
   font-size: 14px;
   line-height: 1.42857143;
   height: 34px;
@@ -12849,13 +12868,10 @@ textarea.rs-input-group-inside.rs-input-group-md > .rs-input-group-btn {
   height: auto;
 }
 .rs-input-group-inside.rs-input-group-md > .rs-input-group-btn > .rs-icon {
-  font-size: inherit;
-}
-.rs-input-group-inside.rs-input-group-md > .rs-input-group-btn > .rs-icon::before {
-  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.42857143;
 }
 .rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn {
-  height: 30px;
   padding: 4px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -12867,16 +12883,13 @@ textarea.rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn {
   height: auto;
 }
 .rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn > .rs-icon {
-  font-size: inherit;
-}
-.rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn > .rs-icon::before {
-  vertical-align: middle;
+  font-size: 12px;
+  line-height: 1.66666667;
 }
 .rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
-  height: 24px;
   padding: 1px 11px;
   font-size: 12px;
-  line-height: 1.42857143;
+  line-height: 1.66666667;
   height: 22px;
   padding: 1px 7px;
   border-radius: 0 6px 6px 0;
@@ -12885,16 +12898,7 @@ textarea.rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
   height: auto;
 }
 .rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn > .rs-icon {
-  font-size: inherit;
-}
-.rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn > .rs-icon::before {
-  vertical-align: middle;
-}
-.rs-input-group-lg > .rs-input-group-addon > .rs-icon {
-  line-height: 1.375;
-}
-.rs-input-group-sm > .rs-input-group-addon > .rs-icon,
-.rs-input-group-xs > .rs-input-group-addon > .rs-icon {
+  font-size: 12px;
   line-height: 1.66666667;
 }
 .rs-input-group-addon,
@@ -13083,7 +13087,6 @@ textarea.rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
   width: 100%;
 }
 .rs-picker-search-input {
-  height: 34px;
   padding: 7px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -13098,10 +13101,9 @@ textarea.rs-picker-search-input {
   height: auto;
 }
 .rs-picker-tag .rs-picker-search-input {
-  height: 24px;
   padding: 1px 11px;
-  font-size: 12px;
-  line-height: 1.42857143;
+  font-size: 14px;
+  line-height: 20px;
   padding-left: 11px;
 }
 textarea.rs-picker-tag .rs-picker-search-input {
@@ -13112,8 +13114,6 @@ textarea.rs-picker-tag .rs-picker-search-input {
   outline: none;
   border: none;
   width: 100%;
-  font-size: 14px;
-  line-height: 20px;
 }
 .rs-picker-focused .rs-picker-search-input {
   z-index: 6;
@@ -13587,6 +13587,8 @@ textarea.rs-picker-tag .rs-picker-search-input {
   clear: both;
 }
 .rs-modal-header .rs-modal-title {
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   color: #272c36;
   overflow: hidden;
@@ -13666,9 +13668,13 @@ textarea.rs-picker-tag .rs-picker-search-input {
 }
 .rs-picker-cascader-menu .rs-picker-check-menu-item {
   padding-right: 26px;
+  word-break: break-word;
 }
 .rs-picker-cascader-menu-column.rs-picker-cascader-menu-column-uncheckable .rs-picker-check-menu-item {
   padding-left: 12px;
+}
+.rs-picker-multi-cascader-menu .rs-picker-cascader-col {
+  padding: 0;
 }
 .rs-nav {
   position: relative;
@@ -13822,6 +13828,10 @@ textarea.rs-picker-tag .rs-picker-search-input {
   top: 0;
   left: 0;
   pointer-events: none;
+}
+.rs-nav-default .rs-nav-item .rs-ripple-pond {
+  border-radius: inherit;
+  overflow: hidden;
 }
 .rs-nav-tabs .rs-nav-item.rs-nav-item-active {
   z-index: 1;
@@ -14145,6 +14155,12 @@ textarea.rs-picker-tag .rs-picker-search-input {
   line-height: 1;
   margin-right: 10px;
 }
+.rs-notification-notify .rs-notification-title-with-icon {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
 .rs-notification-notify .rs-notification-description {
   color: #575757;
   display: table\9;
@@ -14425,6 +14441,7 @@ textarea.rs-picker-tag .rs-picker-search-input {
 .rs-panel {
   border-radius: 6px;
   box-shadow: black;
+  overflow: hidden;
 }
 .rs-panel-bordered,
 .rs-panel-group-bordered {
@@ -14522,6 +14539,13 @@ textarea.rs-picker-tag .rs-picker-search-input {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  display: block\9;
+  max-width: 100%\9;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .rs-picker-value-list {
+    max-width: 100%;
+  }
 }
 .rs-picker-value-count {
   margin: 0 4px;
@@ -14609,8 +14633,8 @@ textarea.rs-picker-tag .rs-picker-search-input {
 .rs-picker-default .rs-picker-toggle {
   padding: 7px 11px;
 }
-.rs-picker-default .rs-picker-toggle:not(.rs-.rs-picker-default .rs-picker-toggle-disabled):hover,
-.rs-picker-default .rs-picker-toggle.active {
+.rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle:hover,
+.rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle.active {
   border-color: #34c3ff;
 }
 .rs-picker-subtle .rs-picker-toggle {
@@ -15153,6 +15177,7 @@ textarea.rs-picker-tag .rs-picker-search-input {
   color: #a6a6a6;
   transition: 0.2s color linear;
   width: 19px\9 !important;
+  text-align: center\9;
 }
 .rs-picker-toggle-clean::before {
   font-family: 'rsuite-icon-font' !important;
@@ -15176,6 +15201,11 @@ textarea.rs-picker-tag .rs-picker-search-input {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rs-picker-toggle-clean {
     width: 19px;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .rs-picker-toggle-clean {
+    text-align: center\9;
   }
 }
 .rs-picker-toggle-clean:hover {
@@ -15255,7 +15285,6 @@ textarea.rs-picker-tag .rs-picker-search-input {
   border: 1px solid #e5e5ea;
   transition: border-color ease-in-out 0.3s;
   border-radius: 6px;
-  height: 36px;
   padding: 7px 11px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -15896,10 +15925,8 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   font-size: 16px;
   line-height: 1.25;
   padding-left: 56px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   width: 100%;
+  white-space: normal;
 }
 .rs-sidenav .rs-nav-item .rs-nav-item-content > .rs-icon,
 .rs-sidenav .rs-dropdown .rs-dropdown-toggle > .rs-icon {
@@ -15909,6 +15936,10 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   left: 20px;
   top: 15px;
   line-height: 1.25;
+}
+.rs-sidenav .rs-nav-item .rs-nav-item-content > .rs-icon > svg,
+.rs-sidenav .rs-dropdown .rs-dropdown-toggle > .rs-icon > svg {
+  height: 16px;
 }
 .rs-sidenav .rs-nav-item:not(.rs-nav-item-disabled) > .rs-nav-item-content,
 .rs-sidenav .rs-dropdown .rs-dropdown-toggle {
@@ -15921,7 +15952,9 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   border-radius: 0;
 }
 .rs-sidenav-collapse-in .rs-dropdown {
-  padding-top: 50px;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column-reverse;
 }
 .rs-sidenav-collapse-in .rs-dropdown-item:not(.rs-dropdown-item-submenu) > .rs-dropdown-item-content,
 .rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
@@ -15963,12 +15996,6 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 }
 .rs-sidenav-collapse-in .rs-dropdown-item-disabled .rs-sidenav-collapse-in .rs-dropdown-item-content::after {
   display: none;
-}
-.rs-sidenav-collapse-in .rs-dropdown .rs-dropdown-menu-active ~ .rs-dropdown-toggle,
-.rs-sidenav-collapse-in .rs-dropdown > .rs-dropdown-toggle {
-  position: absolute;
-  top: 0;
-  border-radius: 0;
 }
 .rs-sidenav-collapse-in .rs-dropdown .rs-dropdown-toggle-caret::before,
 .rs-sidenav-collapse-in .rs-dropdown .rs-dropdown-menu-toggle > .rs-icon::before {
@@ -16014,10 +16041,8 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 }
 .rs-sidenav-collapse-in .rs-dropdown-item:not(.rs-dropdown-item-submenu) > .rs-dropdown-item-content,
 .rs-sidenav-collapse-in .rs-dropdown-menu .rs-dropdown-menu-toggle {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   width: 100%;
+  white-space: normal;
 }
 .rs-sidenav-collapse-in .rs-dropdown-menu {
   overflow: hidden;
@@ -16035,31 +16060,60 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   padding-right: 40px;
   position: relative;
 }
-.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle > .rs-icon {
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle > .rs-dropdown-menu-toggle-icon {
   position: absolute;
   right: 20px;
-  top: 15px;
+  top: 11px;
   width: auto;
   height: 20px;
+}
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-item-menu-icon {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  line-height: 1.42857143;
+  width: 14px;
+  position: absolute;
+  z-index: 1;
 }
 .rs-sidenav-collapse-in .rs-dropdown-item > .rs-dropdown-item-content,
 .rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
   padding: 11px 20px 11px 56px;
 }
-.rs-sidenav-collapse-in .rs-dropdown-item > .rs-dropdown-item-content > .rs-dropdown-menu-toggle > .rs-icon {
-  top: 11px;
+.rs-sidenav-collapse-in .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-item-menu-icon {
+  left: 56px;
+}
+.rs-sidenav-collapse-in .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
+  padding-left: 76px;
 }
 .rs-sidenav-collapse-in .rs-dropdown-item > .rs-dropdown-item-content .rs-dropdown-item:not(.rs-dropdown-item-submenu) > .rs-dropdown-item-content,
 .rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu-toggle {
   padding-left: 65px;
 }
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu > .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-item-menu-icon {
+  left: 65px;
+}
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu > .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
+  padding-left: 85px;
+}
 .rs-sidenav-collapse-in .rs-dropdown-item > .rs-dropdown-item-content .rs-dropdown-item-content .rs-dropdown-item:not(.rs-dropdown-item-submenu) > .rs-dropdown-item-content,
 .rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu .rs-dropdown-menu-toggle {
   padding-left: 74px;
 }
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu > .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-item-menu-icon {
+  left: 74px;
+}
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu > .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
+  padding-left: 94px;
+}
 .rs-sidenav-collapse-in .rs-dropdown-item > .rs-dropdown-item-content .rs-dropdown-item-content .rs-dropdown-item-content .rs-dropdown-item:not(.rs-dropdown-item-submenu) > .rs-dropdown-item-content,
 .rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu .rs-dropdown-menu .rs-dropdown-menu-toggle {
   padding-left: 83px;
+}
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu .rs-dropdown-menu > .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-item-menu-icon {
+  left: 83px;
+}
+.rs-sidenav-collapse-in .rs-dropdown-item-submenu > .rs-dropdown-item-content > .rs-dropdown-menu .rs-dropdown-menu .rs-dropdown-menu > .rs-dropdown-item.rs-dropdown-item-with-icon > .rs-dropdown-item-content > .rs-dropdown-menu-toggle {
+  padding-left: 103px;
 }
 .rs-sidenav-collapse-in .rs-dropdown-item > .rs-dropdown-item-content .rs-dropdown-item-content .rs-dropdown-item-content .rs-dropdown-item-content .rs-dropdown-item:not(.rs-dropdown-item-submenu) > .rs-dropdown-item-content {
   padding-left: 92px;
@@ -17082,34 +17136,16 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   transform-origin: right center;
   transform: scaleX(1.2);
 }
-.rs-table-pagination-pagination-wrapper {
+.rs-table-pagination-toolbar {
   padding: 20px 20px;
   font-size: 12px;
   line-height: 1.66666667;
-}
-.rs-table-pagination-pagination-wrapper::before,
-.rs-table-pagination-pagination-wrapper::after {
-  content: ' ';
-  display: table;
-}
-.rs-table-pagination-pagination-wrapper::after {
-  clear: both;
-}
-.rs-table-pagination-pagination-wrapper::before,
-.rs-table-pagination-pagination-wrapper::after {
-  content: ' ';
-  display: table;
-}
-.rs-table-pagination-pagination-wrapper::after {
-  clear: both;
+  display: flex;
+  justify-content: space-between;
 }
 .rs-table-pagination-length-menu,
 .rs-table-pagination-page-info {
   color: #8e8e93;
-}
-.rs-table-pagination-length-menu,
-.rs-table-pagination-page-info,
-.rs-table-pagination-pagination {
   display: inline-block;
   vertical-align: middle;
 }
@@ -17128,9 +17164,8 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 .rs-table-pagination-length-menu + .rs-table-pagination-page-info {
   margin-left: 18px;
 }
-.rs-table-pagination-pagination {
+.rs-table-pagination-end {
   font-size: 0;
-  float: right;
 }
 .rs-tag {
   display: inline-block;
@@ -17157,6 +17192,16 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   font-style: normal;
   line-height: 1;
   content: '\f00d';
+}
+.rs-tag-default .rs-tag-icon-close:hover {
+  color: #f44336;
+}
+.rs-tag-group {
+  margin: -10px 0 0 -10px;
+}
+.rs-tag-group > .rs-tag {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .rs-tag + .rs-tag {
   margin-left: 10px;
@@ -17227,6 +17272,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 .rs-picker-tag .rs-picker-search-input > input {
   display: inline-block;
   width: auto;
+  min-width: 134px;
 }
 .rs-timeline {
   list-style: none;
@@ -18883,13 +18929,18 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   padding-right: 60px;
   padding-bottom: 5px;
 }
+.multi-date-picker .label-text {
+  display: inline-block;
+  color: #8e8e93;
+  margin-left: 10px;
+}
 .multi-date-picker .rs-tag,
 .multi-date-picker .rs-picker-date {
   margin-left: 6px;
   margin-top: 5px;
 }
 .multi-date-picker .rs-picker-date {
-  vertical-align: top;
+  vertical-align: unset;
 }
 .multi-date-picker .rs-picker-toggle-clean {
   right: 36px;
