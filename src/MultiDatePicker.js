@@ -23,6 +23,7 @@ class MultiDatePicker extends React.Component {
     onChange: PropTypes.func,
     disabledDate: PropTypes.func,
     format: PropTypes.string,
+    formatter: PropTypes.func,
     disabled: PropTypes.bool,
     title: PropTypes.node
   };
@@ -84,11 +85,11 @@ class MultiDatePicker extends React.Component {
   };
 
   renderTags = () => {
-    const { format } = this.props;
+    const { format, formatter } = this.props;
     const value = this.getValue();
 
     return value.map(date => {
-      const text = dateFormat(date, format);
+      const text = formatter ? formatter(date) : dateFormat(date, format);
       return (
         <Tag
           closable
