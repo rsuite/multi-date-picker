@@ -1,5 +1,6 @@
 import React from 'react';
 import MultiDatePicker from '../src';
+import { format as dateFormat, isSameDay, subDays } from 'date-fns';
 
 class DefaultExample extends React.Component {
   render() {
@@ -23,6 +24,22 @@ class DefaultExample extends React.Component {
           oneTap={false}
           format="YYYY-MM-DD hh:mm:ss"
           defaultValue={[new Date()]}
+        />
+
+        <hr />
+        <h2>Formatter</h2>
+        <MultiDatePicker
+          oneTap={false}
+          formatter={date => {
+            if (isSameDay(date, new Date())) {
+              return '今天';
+            }
+            if (isSameDay(date, subDays(new Date(), 1))) {
+              return '昨天';
+            }
+            return dateFormat(date, 'YYYY-MM-DD')
+          }}
+          defaultValue={[subDays(new Date(), 2), subDays(new Date(), 1),new Date()]}
         />
       </div>
     );
