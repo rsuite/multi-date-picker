@@ -20,11 +20,7 @@ class DefaultExample extends React.Component {
 
         <hr />
         <h2>Date time</h2>
-        <MultiDatePicker
-          oneTap={false}
-          format="YYYY-MM-DD hh:mm:ss"
-          defaultValue={[new Date()]}
-        />
+        <MultiDatePicker oneTap={false} format="yyyy-MM-dd hh:mm:ss" defaultValue={[new Date()]} />
 
         <hr />
         <h2>Formatter</h2>
@@ -37,9 +33,9 @@ class DefaultExample extends React.Component {
             if (isSameDay(date, subDays(new Date(), 1))) {
               return '昨天';
             }
-            return dateFormat(date, 'YYYY-MM-DD')
+            return dateFormat(date, 'yyyy-MM-dd');
           }}
-          defaultValue={[subDays(new Date(), 2), subDays(new Date(), 1),new Date()]}
+          defaultValue={[subDays(new Date(), 2), subDays(new Date(), 1), new Date()]}
         />
       </div>
     );
