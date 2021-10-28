@@ -1,4 +1,4 @@
-.multi-date-picker {
+.rs-multi-date-picker {
   position: relative;
   min-width: 200px;
   min-height: 36px;
@@ -7,6 +7,10 @@
   border-radius: 6px;
   padding-right: 60px;
   padding-bottom: 5px;
+
+  .rs-picker-toggle-textbox {
+    opacity: 0;
+  }
 
   .label-text {
     display: inline-block;
@@ -29,23 +33,16 @@
     cursor: pointer;
   }
 
-  .rs-picker-toggle-caret::before {
-    content: '\F073' !important;
-  }
-
   .rs-icon-plus {
     font-size: 12px;
   }
 
   .rs-picker-date .rs-picker-toggle {
+    position: static;
     border: none;
     background: #f7f7fa;
     padding: 2px 8px;
     font-size: 12px;
     line-height: 20px;
-
-    &-caret {
-      display: none;
-    }
   }
 }
